@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Regex Form</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <style>
+            body {
+                text-align: center;
+            }
+            input:valid {
+                border: green solid 2px;
+            }
+            input:invalid {
+                border: red solid 2px;
+            }
+        </style>
+    </head>
+    <body>
+        <form id="signin">
+            <label for="username">Enter Username:</label>
+            <input id="username" type="text" placeholder="Username" required maxlength="16" minlength="8" pattern="[a-zA-Z0-9._]{8,}">
+            <p><small>Minimum 8 characters, maximum 16 characters. No special characters other than . or _</small></p>
+            <label for="password">Enter Password: </label>
+            <input id="password" type="password" placeholder="Password" required maxlength="16" minlength="8" pattern="[a-zA-Z0-9._]{8,}">
+            <p><small>Minimum 8 characters, maximum 16 characters. No special characters other than . or _</small></p>
+            <button>Submit</button>
+        </form>
+    </body>
+</html>
